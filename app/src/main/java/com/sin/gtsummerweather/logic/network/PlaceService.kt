@@ -1,7 +1,7 @@
 package com.sin.gtsummerweather.logic.network
 
+import com.sin.gtsummerweather.SunnyWeatherApplication
 import com.sin.gtsummerweather.logic.model.PlaceResponse
-import com.sunnyweather.android.SunnyWeatherApplication
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
