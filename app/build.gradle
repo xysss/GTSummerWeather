@@ -25,11 +25,13 @@ android {
     }
 
     signingConfigs{
-        config{
-            storeFile file(KEY_PATH)
-            storePassword KEY_PASS
-            keyAlias ALIAS_NAME
-            keyPassword ALIAS_PASS
+        app {
+            keyAlias sign.keyAlias
+            keyPassword sign.keyPassword
+            storeFile file(sign.file)
+            storePassword sign.storePassword
+            v1SigningEnabled true
+            v2SigningEnabled true
         }
     }
 
@@ -37,7 +39,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.app
         }
     }
 }
